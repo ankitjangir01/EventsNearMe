@@ -5,11 +5,11 @@ const router = express.Router();
 const cloudinary = require('cloudinary').v2;
 const fileUpload = require('express-fileupload');
 
-cloudinary.config({
-    cloud_name: 'eventsnearme',
-    api_key: process.env.CLDNRY_API_KEY,
-    api_secret: process.env.CLDNRY_API_SECRET
-});
+// cloudinary.config({
+//     cloud_name: 'eventsnearme',
+//     api_key: process.env.CLDNRY_API_KEY,
+//     api_secret: process.env.CLDNRY_API_SECRET
+// });
 
 router.get('/allevents', async (req, res) => {
     let success = false;
