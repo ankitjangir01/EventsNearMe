@@ -15,10 +15,6 @@ app.use(fileUpload({
     limits: { fileSize: 1024*1024*2}
 }));
 
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/frontend/build/index.html');
-})
-
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
