@@ -24,9 +24,9 @@ app.use('/api/events', require('./routes/events'));
 
 //------------------for hosting on heroku--------------
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    app.use(express.static('inotebook/build'));
+    app.use(express.static('frontend/build'));
     app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/inotebook/build/index.html'));
+    res.sendFile(path.join(__dirname + '/frontend/build/index.html'));
     });
    }
    //------------------for hosting-------------
