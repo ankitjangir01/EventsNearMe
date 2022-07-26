@@ -16,7 +16,7 @@ app.use(fileUpload({
 }));
 
 app.get('/', (req, res) => {
-    res.sendFile('./frontend/build/index.html');
+    res.sendFile(__dirname + './frontend/build/index.html');
 })
 
 app.use('/api/auth', require('./routes/auth'));
