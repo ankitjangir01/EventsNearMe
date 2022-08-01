@@ -30,7 +30,7 @@ const AddEvent = () => {
     const res = await fetch(url + eve.target.value, {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': process.env.REACT_APP_X_RapidAPI_Key,
+        'X-RapidAPI-Key': `'${process.env.REACT_APP_X_RapidAPI_Key}'`,
         'X-RapidAPI-Host': 'autocomplete-india.p.rapidapi.com'
       }
     });
