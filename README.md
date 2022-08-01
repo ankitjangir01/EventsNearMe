@@ -25,6 +25,7 @@ EventsNearMe offers you world class experience with the following features-
 ![FontAwesome](https://res.cloudinary.com/eventsnearme/image/upload/v1658583783/Technologies%20used/Honeyview_1200px-Font_Awesome_logomark_blue.svg_xw8dou.jpg "FontAwesome")
 ![RapidAPI](https://res.cloudinary.com/eventsnearme/image/upload/v1658667778/Technologies%20used/Honeyview_reuntzuy6gy8ssnbktye_udlv8a.jpg "RapidAPI")
 ![Autocomplete India](https://res.cloudinary.com/eventsnearme/image/upload/v1658667777/Technologies%20used/Honeyview_images_sa8pcr.jpg "Autocomplete India API")
+![Heroku App](https://res.cloudinary.com/eventsnearme/image/upload/v1659378979/Technologies%20used/Honeyview_23211_bm944a.jpg "Heroku")
 
 ## Software used
 ![VS Code](https://res.cloudinary.com/eventsnearme/image/upload/v1658583899/Technologies%20used/Honeyview_opengraph-blog_qinga7.jpg "VS Code")
