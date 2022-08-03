@@ -2,6 +2,33 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+    const getAuthBtns = () => {
+        if (localStorage.getItem('authToken')) {
+            return (<ul className="navbar-nav d-flex flex-row">
+                <li className="nav-item me-3 me-lg-0">
+                    <Link className="nav-link" to="#!">
+                        My Profile
+                    </Link>
+                </li>
+            </ul>
+            )
+        }
+        else return (
+            <ul className="navbar-nav d-flex flex-row">
+                <li className="nav-item me-3 me-lg-0">
+                    <Link className="nav-link" to="/signup">
+                        Login
+                    </Link>
+                </li>
+                <li className="nav-item me-3 me-lg-0">
+                    <Link className="nav-link" to="/signup">
+                        Signup
+                    </Link>
+                </li>
+            </ul>
+        )
+    }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light">
@@ -24,13 +51,8 @@ const Navbar = () => {
                                 <Link className="nav-link" to="/addevent">Add an Event</Link>
                             </li>
                         </ul>
-                        <ul className="navbar-nav d-flex flex-row">
-                            <li className="nav-item me-3 me-lg-0">
-                                <Link className="nav-link" to="#!">
-                                    My Profile
-                                </Link>
-                            </li>
-                        </ul>
+                        {getAuthBtns()}
+
                     </div>
                 </div>
             </nav>

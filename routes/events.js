@@ -3,13 +3,12 @@ const express = require('express');
 const Event = require('../models/Event');
 const router = express.Router();
 const cloudinary = require('cloudinary').v2;
-const fileUpload = require('express-fileupload');
 
-// cloudinary.config({
-//     cloud_name: 'eventsnearme',
-//     api_key: process.env.CLDNRY_API_KEY,
-//     api_secret: process.env.CLDNRY_API_SECRET
-// });
+cloudinary.config({
+    cloud_name: 'eventsnearme',
+    api_key: process.env.CLDNRY_API_KEY,
+    api_secret: process.env.CLDNRY_API_SECRET
+});
 
 router.get('/allevents', async (req, res) => {
     let success = false;
@@ -35,7 +34,6 @@ router.post('/addevent', async (req, res) => {
                 event_poster_url = result.secure_url;
             })
         }
-
         const event = new Event({
             poster: event_poster_url,
             title: req.body.title,
@@ -50,7 +48,7 @@ router.post('/addevent', async (req, res) => {
         });
         await event.save();
         success = true;
-        res.json({ success });
+        res.redirect(302, '/');
     }
     catch (err) {
         console.log(err)
