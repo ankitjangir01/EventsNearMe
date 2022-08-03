@@ -3,15 +3,19 @@ import Home from './Components/Home';
 import { Routes, Route} from 'react-router-dom';
 import AddEvent from './Components/AddEvent';
 import AllEvents from './Components/AllEvents';
-import SearchResults from './Components/SearchResults';
+import Signup from './Components/Signup';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
+      <ToastContainer autoClose={3000}/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/addevent" element={<AddEvent/>} />
         <Route exact path="/allevents" element={<AllEvents/>} />
+        <Route exact path="/signup" element={<Signup/>} />
       </Routes>
     </div>
   );

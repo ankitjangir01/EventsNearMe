@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ankit Jangir",
   "license": "ISC",
@@ -17,6 +15,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.4.4",
     "path": "^0.12.7"
   }
