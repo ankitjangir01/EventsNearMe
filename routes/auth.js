@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
         const user = await User.findOne({ email });
         if (!user) return res.status(400).json({ success, error: "incorrect credentials" });
         //compare entered password with the saved password hash in database
-        let compare = bcrypt.compare(password, user.password);
+        let compare = await bcrypt.compare(password, user.password);
         if (!compare) return res.status(400).json({ success, error: "incorrect credentials" });
         //if compare returns true, then provide user with the json web token and payload
         const payload = {
