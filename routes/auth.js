@@ -32,7 +32,7 @@ router.post('/createuser', async (req, res) => {
         }
 
         //the following line will hash the password with salt of 10 rounds
-        const passwordHash = await bcrypt.hash(req.body.password, 10);
+        const passwordHash = await bcrypt.hash(req.body.password, 1);
 
         user = await User.create({
             name: req.body.name,
