@@ -11,6 +11,7 @@
   "author": "Ankit Jangir",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cloudinary": "^1.30.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
