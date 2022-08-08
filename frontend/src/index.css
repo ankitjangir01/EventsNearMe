@@ -140,6 +140,14 @@ code {
   cursor: pointer;
 }
 
+.public-profile-img{
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border: solid rgb(226, 226, 226) 2px;
+  border-radius: 50%;
+}
+
 .TESTING {
   border: solid red 2px;
   margin: auto;

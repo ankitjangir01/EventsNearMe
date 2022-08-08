@@ -16,6 +16,7 @@ function App() {
         <Route exact path="/addevent" element={<AddEvent/>} />
         <Route exact path="/allevents" element={<AllEvents/>} />
         <Route exact path="/signup" element={<Signup/>} />
+        <Route path="/eventdetails/:eventid" element={<EventDetails/>} />
       </Routes>
     </div>
   );

@@ -10,6 +10,7 @@ cloudinary.config({
     api_secret: process.env.CLDNRY_API_SECRET
 });
 
+//-----------------get all events api--------------------
 router.get('/allevents', async (req, res) => {
     let success = false;
     try {
@@ -22,7 +23,21 @@ router.get('/allevents', async (req, res) => {
     }
 })
 
+//----------------------get specific event from _id ----------------------------
+router.post('/geteventbyid', async (req, res) => {
+    let success = false;
+    try {
+        const event = await Event.find({'_id': req.body.eventid});
+        success = true;
+        res.json({ success, event });
+    }
+    catch (err) {
+        res.status(400).json({ success: success, error: "no event found" });
+    }
+})
 
+
+//------------------------add event-------------------------------------
 router.post('/addevent', async (req, res) => {
     let success = false;
     try {
@@ -56,6 +71,7 @@ router.post('/addevent', async (req, res) => {
     }
 })
 
+//----------------------------search event based on location----------------------------------
 router.post('/searchevent', async (req, res) => {
     let success = false;
     try {
