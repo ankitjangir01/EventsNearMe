@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const Event = (props) => {
-  const { poster, title, description, address, city, state, country, date } = props.event;
+  const {_id, poster, title, address, city, state, country, date } = props.event;
 
   const onClickShareBtn = () => {
     let url = 'http://events-near-me-india.herokuapp.com/eventdetails';
