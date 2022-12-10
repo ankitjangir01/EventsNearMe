@@ -23,9 +23,7 @@ const EventDetails = () => {
     }
 
     useEffect(() => {
-        return () => {
-            fetchEvent();
-        }
+        fetchEvent();
     }, [])
 
 
