@@ -1,6 +1,10 @@
 # EventsNearMe
 EventsNearMe is helping hand for you to find events in your locality, city or elsewhere. These events include cultural, sports, entertainment, seminars, workshops, dj nights, live performances and more.
 
+# Deployed Application
+Find the live application in action here-
+https://eventsnearme.onrender.com/
+
 ## Features
 EventsNearMe offers you world class experience with the following features-
 - Search the locality to find all events there
