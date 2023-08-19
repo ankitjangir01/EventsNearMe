@@ -14,6 +14,7 @@ cloudinary.config({
 router.get('/allevents', async (req, res) => {
     let success = false;
     try {
+        console.log("fetching all events");
         const allevents = await Event.find({});
         success = true;
         res.json({ success, allevents });

@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 connectToMongo();
 
-//middlewares
+//middleware
 app.use(cors());
 app.use(express.json());
 app.use(fileUpload({
@@ -16,20 +16,20 @@ app.use(fileUpload({
 }));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/frontend/build/index.html');
+    res.sendFile(__dirname + '/frontend/index.js');
 })
 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
 //------------------for hosting on heroku--------------
-if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
-    app.use(express.static('frontend/build'));
-    app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/frontend/build/index.html'));
-    });
-   }
-   //------------------for hosting-------------
+// if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
+//     app.use(express.static('frontend/build'));
+//     app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname + '/frontend/index.js'));
+//     });
+//    }
+//    //------------------for hosting-------------
 
 app.listen(PORT, ()=>{
     console.log("listening on port " + PORT);

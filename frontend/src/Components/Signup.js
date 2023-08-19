@@ -4,6 +4,7 @@ import Footer from './Footer';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+const baseUrl = process.env.BASE_URL || 'http://localhost:5000'
 
 const Signup = () => {
     const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Signup = () => {
     }
 
     const onClick = async () => {
-        const response = await fetch('/api/auth/login', {
+        const response = await fetch(baseUrl + '/api/auth/login', {
             method: 'post',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +42,7 @@ const Signup = () => {
             <div className="d-flex justify-content-center">
                 <div className="add-event-form mx-4 my-4 bg-light">
                     <div className="mx-4 my-4 bg-light">
-                        <form className="form-control p-4" method='POST' action="/api/auth/createuser" encType='multipart/form-data' >
+                        <form className="form-control p-4" method='POST' action={baseUrl + "/api/auth/createuser"} encType='multipart/form-data' >
                             <div className='form-control mr-2 mt-2 mb-4'>
                                 <label htmlFor="profilePhoto" className='text-muted'>Upload profile photo<br /> </label>
                                 <br />

@@ -17,6 +17,7 @@ cloudinary.config({
 router.post('/createuser', async (req, res) => {
     let success = false;
     try {
+        console.log("creating new user")
         var file_url = 'https://res.cloudinary.com/eventsnearme/image/upload/v1657774124/profile%20photos/eventsnearme-profile-photo-default_nwuhvi.png'
         if (req.files) {
             const file = req.files.profilePhoto;
